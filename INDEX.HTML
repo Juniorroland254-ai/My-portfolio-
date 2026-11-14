@@ -1,0 +1,4251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>J-ROLAND | ANTHONY OBI</title>
+
+<meta name="description"
+content="J-ROLAND - ANTHONY OBI | Creative Designer, Web Designer, Photo Editor and Digital Solutions Expert">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+<style>
+
+/* =====================================================
+   VALIDDXN PORTFOLIO
+   OSCAR EZE
+   SINGLE FILE WEBSITE
+===================================================== */
+
+
+/* ================= GLOBAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+
+    --green: #00ff9d;
+    --green2: #00c878;
+    --gold: #f5c451;
+    --gold2: #ffdf7e;
+
+    --black: #030807;
+    --dark: #07130e;
+    --dark2: #0b1d15;
+    --card: #0e241a;
+
+    --white: #ffffff;
+    --text: #e8f2ed;
+    --gray: #9aaba3;
+
+    --border: rgba(0,255,157,0.15);
+
+    --shadow:
+        0 20px 60px rgba(0,0,0,0.45);
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+
+    font-family: "Montserrat", sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(0,255,157,.07),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(245,196,81,.06),
+            transparent 30%
+        ),
+        var(--black);
+
+    color: var(--text);
+
+    overflow-x: hidden;
+}
+
+
+/* ================= SCROLL BAR ================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #020605;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+        var(--green),
+        var(--gold)
+    );
+
+    border-radius: 20px;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+
+    position: fixed;
+
+    width: 100%;
+    height: 78px;
+
+    top: 0;
+    left: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background:
+        rgba(3,8,7,.85);
+
+    backdrop-filter: blur(18px);
+
+    border-bottom:
+        1px solid rgba(0,255,157,.12);
+}
+
+
+/* LOGO */
+
+.logo {
+
+    font-size: 27px;
+
+    font-weight: 900;
+
+    letter-spacing: -1px;
+
+    color: white;
+
+    text-decoration: none;
+
+    position: relative;
+}
+
+.logo span {
+    color: var(--green);
+}
+
+.logo::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 30px;
+    height: 3px;
+
+    background: var(--gold);
+
+    left: 0;
+    bottom: -7px;
+
+    border-radius: 10px;
+}
+
+
+/* NAVIGATION */
+
+nav {
+
+    display: flex;
+
+    gap: 30px;
+}
+
+nav a {
+
+    color: #dbe8e1;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: .5px;
+
+    transition: .3s;
+
+    position: relative;
+}
+
+nav a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -9px;
+
+    width: 0;
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--green),
+            var(--gold)
+        );
+
+    transition: .3s;
+}
+
+nav a:hover,
+nav a.active {
+
+    color: var(--green);
+}
+
+nav a:hover::after,
+nav a.active::after {
+
+    width: 100%;
+}
+
+
+/* HEADER BUTTONS */
+
+.header-buttons {
+
+    display: flex;
+
+    gap: 12px;
+}
+
+.header-buttons button {
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: rgba(0,255,157,.06);
+
+    border:
+        1px solid rgba(0,255,157,.2);
+
+    color: var(--green);
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.header-buttons button:hover {
+
+    background: var(--green);
+
+    color: #00140c;
+
+    transform: rotate(10deg);
+}
+
+.menu {
+
+    display: none;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    padding:
+        150px 7%
+        100px;
+
+    display: grid;
+
+    grid-template-columns:
+        1.1fr .9fr;
+
+    align-items: center;
+
+    gap: 70px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* HERO GLOW */
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(0,255,157,.15),
+            transparent 65%
+        );
+
+    right: -200px;
+    top: 80px;
+
+    pointer-events: none;
+}
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(245,196,81,.08),
+            transparent 65%
+        );
+
+    left: -200px;
+    bottom: -150px;
+}
+
+
+/* HERO TEXT */
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.hero-tag {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 9px 15px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(0,255,157,.06);
+
+    border:
+        1px solid rgba(0,255,157,.2);
+
+    color: var(--green);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+}
+
+.hero-tag i {
+    font-size: 8px;
+}
+
+
+.hero h1 {
+
+    font-size:
+        clamp(45px, 6vw, 82px);
+
+    line-height: 1.02;
+
+    font-weight: 900;
+
+    letter-spacing: -5px;
+
+    max-width: 800px;
+}
+
+.hero h1 .green {
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--green),
+            #72ffc9
+        );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+.hero h1 .gold {
+
+    color: var(--gold);
+}
+
+
+.hero-subtitle {
+
+    margin-top: 25px;
+
+    font-size: 22px;
+
+    font-weight: 600;
+
+    color: var(--gray);
+}
+
+.hero-subtitle strong {
+
+    color: white;
+}
+
+
+.hero-description {
+
+    margin-top: 20px;
+
+    max-width: 650px;
+
+    color: var(--gray);
+
+    line-height: 1.9;
+
+    font-size: 14px;
+}
+
+
+/* HERO BUTTONS */
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 35px;
+
+    flex-wrap: wrap;
+}
+
+.btn {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 16px 26px;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    text-transform: uppercase;
+
+    transition: .35s;
+}
+
+.btn-green {
+
+    color: #00140c;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--green),
+            var(--green2)
+        );
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,255,157,.18);
+}
+
+.btn-green:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,255,157,.3);
+}
+
+.btn-outline {
+
+    color: white;
+
+    border:
+        1px solid rgba(255,255,255,.15);
+
+    background:
+        rgba(255,255,255,.03);
+}
+
+.btn-outline:hover {
+
+    border-color: var(--green);
+
+    color: var(--green);
+
+    transform: translateY(-5px);
+}
+
+
+/* SOCIAL */
+
+.socials {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 30px;
+}
+
+.socials a {
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(255,255,255,.1);
+
+    color: white;
+
+    text-decoration: none;
+
+    transition: .3s;
+}
+
+.socials a:hover {
+
+    background: var(--green);
+
+    color: #00140c;
+
+    transform:
+        translateY(-4px);
+}
+
+
+/* ================= HERO VISUAL ================= */
+
+.hero-visual {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.visual-ring {
+
+    width: 410px;
+    height: 410px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(0,255,157,.5);
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    animation:
+        float 5s ease-in-out infinite;
+
+    box-shadow:
+        0 0 80px
+        rgba(0,255,157,.08);
+}
+
+.visual-ring::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 28px;
+
+    border-radius: 50%;
+
+    border:
+        1px dashed
+        rgba(245,196,81,.45);
+}
+
+.visual-ring::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 13px;
+    height: 13px;
+
+    background: var(--gold);
+
+    border-radius: 50%;
+
+    top: 30px;
+    right: 85px;
+
+    box-shadow:
+        0 0 20px var(--gold);
+}
+
+
+/* PROFILE CARD */
+
+.profile-card {
+
+    width: 290px;
+    height: 355px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #123b2b,
+            #06120c
+        );
+
+    border:
+        1px solid
+        rgba(0,255,157,.3);
+
+    box-shadow:
+        0 30px 70px
+        rgba(0,0,0,.6);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    transform:
+        rotate(-5deg);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.profile-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 200px;
+    height: 200px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(0,255,157,.12);
+
+    filter: blur(50px);
+
+    top: -60px;
+    right: -60px;
+}
+
+.card-logo {
+
+    font-size: 35px;
+
+    font-weight: 900;
+
+    position: relative;
+}
+
+.card-logo span {
+    color: var(--green);
+}
+
+.card-name {
+
+    margin-top: 40px;
+
+    font-size: 17px;
+
+    letter-spacing: 5px;
+
+    font-weight: 800;
+
+    color: var(--gold);
+}
+
+.card-job {
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: var(--gray);
+
+    margin-top: 10px;
+}
+
+.card-line {
+
+    width: 80px;
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--green),
+            var(--gold)
+        );
+
+    margin: 28px 0;
+}
+
+.card-icons {
+
+    display: flex;
+
+    gap: 22px;
+
+    color: var(--green);
+
+    font-size: 22px;
+}
+
+
+/* ================= FLOAT ================= */
+
+@keyframes float {
+
+    0%,100% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    50% {
+        transform:
+            translateY(-18px)
+            rotate(2deg);
+    }
+}
+
+
+/* ================= STATS ================= */
+
+.stats {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    background:
+        linear-gradient(
+            90deg,
+            #06120d,
+            #0b2017
+        );
+
+    border-top:
+        1px solid rgba(0,255,157,.12);
+
+    border-bottom:
+        1px solid rgba(0,255,157,.12);
+}
+
+.stat {
+
+    padding: 40px 20px;
+
+    text-align: center;
+
+    border-right:
+        1px solid
+        rgba(255,255,255,.06);
+}
+
+.stat:last-child {
+    border-right: none;
+}
+
+.stat i {
+
+    color: var(--green);
+
+    font-size: 23px;
+
+    margin-bottom: 12px;
+}
+
+.stat h3 {
+
+    font-size: 35px;
+
+    color: white;
+
+    margin-bottom: 5px;
+}
+
+.stat p {
+
+    color: var(--gray);
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+/* ================= SECTIONS ================= */
+
+section {
+
+    scroll-margin-top: 80px;
+}
+
+.section {
+
+    padding:
+        115px 7%;
+}
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+
+.section-title small {
+
+    color: var(--green);
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 4px;
+}
+
+.section-title h2 {
+
+    font-size:
+        clamp(35px,5vw,58px);
+
+    margin-top: 12px;
+
+    font-weight: 900;
+
+    letter-spacing: -2px;
+}
+
+.section-title h2 span {
+
+    color: var(--green);
+}
+
+
+/* ================= ABOUT ================= */
+
+.about {
+
+    display: grid;
+
+    grid-template-columns:
+        .8fr 1.2fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.about-brand {
+
+    height: 430px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(0,255,157,.13),
+            transparent 60%
+        ),
+        var(--dark2);
+
+    border:
+        1px solid
+        rgba(0,255,157,.12);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.about-brand::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 20px;
+
+    border:
+        1px solid
+        rgba(245,196,81,.15);
+}
+
+.about-brand-logo {
+
+    font-size: 50px;
+
+    font-weight: 900;
+
+    z-index: 2;
+}
+
+.about-brand-logo span {
+
+    color: var(--green);
+}
+
+.about-brand-text {
+
+    margin-top: 20px;
+
+    color: var(--gold);
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    z-index: 2;
+}
+
+.about-content h3 {
+
+    font-size: 31px;
+
+    margin-bottom: 20px;
+}
+
+.about-content p {
+
+    color: var(--gray);
+
+    line-height: 1.9;
+
+    margin-bottom: 17px;
+
+    font-size: 13px;
+}
+
+.about-content strong {
+    color: white;
+}
+
+.about-list {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+.about-list div {
+
+    font-size: 11px;
+
+    color: #dbe8e1;
+}
+
+.about-list i {
+
+    color: var(--green);
+
+    margin-right: 8px;
+}
+
+
+/* ================= SERVICES ================= */
+
+.services {
+
+    background:
+        linear-gradient(
+            180deg,
+            #06100c,
+            #081811
+        );
+}
+
+.services-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 20px;
+}
+
+.service {
+
+    min-height: 275px;
+
+    padding: 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0d261b,
+            #08140f
+        );
+
+    border:
+        1px solid
+        rgba(0,255,157,.09);
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition: .4s;
+}
+
+.service::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    background:
+        rgba(0,255,157,.08);
+
+    border-radius: 50%;
+
+    top: -80px;
+    right: -80px;
+
+    transition: .4s;
+}
+
+.service:hover {
+
+    transform:
+        translateY(-10px);
+
+    border-color:
+        rgba(0,255,157,.5);
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,.35);
+}
+
+.service:hover::before {
+
+    transform: scale(2);
+}
+
+.service-number {
+
+    position: absolute;
+
+    right: 20px;
+    top: 15px;
+
+    font-size: 42px;
+
+    font-weight: 900;
+
+    color:
+        rgba(255,255,255,.04);
+}
+
+.service i {
+
+    font-size: 32px;
+
+    color: var(--green);
+
+    margin-bottom: 25px;
+}
+
+.service h3 {
+
+    font-size: 18px;
+
+    margin-bottom: 13px;
+}
+
+.service p {
+
+    color: var(--gray);
+
+    font-size: 11px;
+
+    line-height: 1.8;
+}
+
+
+/* ================= TOOLS ================= */
+
+.tools-section {
+
+    background:
+        #07130e;
+}
+
+.tools-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap: 20px;
+}
+
+.tool {
+
+    padding: 28px;
+
+    background:
+        var(--dark2);
+
+    border:
+        1px solid
+        rgba(255,255,255,.06);
+
+    transition: .3s;
+}
+
+.tool:hover {
+
+    transform:
+        translateY(-7px);
+
+    border-color:
+        rgba(0,255,157,.4);
+}
+
+.tool-icon {
+
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    font-size: 21px;
+
+    font-weight: 900;
+
+    color: white;
+
+    margin-bottom: 20px;
+}
+
+.corel {
+    background: #159447;
+}
+
+.pixellab {
+    background: #604fd0;
+}
+
+.picsart {
+    background: #e93452;
+}
+
+.canva {
+    background: #00a9dc;
+}
+
+.html {
+    background: #e44d26;
+}
+
+.css {
+    background: #2965f1;
+}
+
+.javascript {
+    background: #c9a900;
+}
+
+.webdesign {
+    background:
+        linear-gradient(
+            135deg,
+            var(--green),
+            var(--green2)
+        );
+}
+
+.tool h3 {
+
+    font-size: 15px;
+
+    margin-bottom: 7px;
+}
+
+.tool p {
+
+    color: var(--gray);
+
+    font-size: 10px;
+
+    margin-bottom: 18px;
+}
+
+.progress {
+
+    height: 5px;
+
+    background:
+        rgba(255,255,255,.08);
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.progress span {
+
+    display: block;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--green),
+            var(--gold)
+        );
+}
+
+.tool-percent {
+
+    display: block;
+
+    color: var(--green);
+
+    font-size: 9px;
+
+    margin-top: 8px;
+}
+
+
+/* ================= PORTFOLIO ================= */
+
+.filters {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 40px;
+}
+
+.filter {
+
+    padding: 11px 19px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255,255,255,.03);
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    color: var(--gray);
+
+    font-family: inherit;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.filter:hover,
+.filter.active {
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--green),
+            var(--green2)
+        );
+
+    color: #00140c;
+
+    border-color: var(--green);
+}
+
+.portfolio-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 25px;
+}
+
+.portfolio-card {
+
+    background:
+        var(--dark2);
+
+    border:
+        1px solid
+        rgba(255,255,255,.07);
+
+    overflow: hidden;
+
+    transition: .4s;
+}
+
+.portfolio-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        rgba(0,255,157,.4);
+}
+
+.portfolio-image {
+
+    height: 270px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.portfolio-image::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 200px;
+    height: 200px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.1);
+
+    filter: blur(20px);
+}
+
+.portfolio-image span {
+
+    font-size: 32px;
+
+    font-weight: 900;
+
+    position: relative;
+
+    letter-spacing: 2px;
+}
+
+.design1 {
+
+    background:
+        linear-gradient(
+            135deg,
+            #00432e,
+            #00c896
+        );
+}
+
+.design2 {
+
+    background:
+        linear-gradient(
+            135deg,
+            #17221d,
+            #6e857b
+        );
+}
+
+.design3 {
+
+    background:
+        linear-gradient(
+            135deg,
+            #071e36,
+            #087de0
+        );
+}
+
+.design4 {
+
+    background:
+        linear-gradient(
+            135deg,
+            #251b08,
+            #d7a83f
+        );
+}
+
+.design5 {
+
+    background:
+        linear-gradient(
+            135deg,
+            #220c39,
+            #923fd2
+        );
+}
+
+.design6 {
+
+    background:
+        linear-gradient(
+            135deg,
+            #341107,
+            #e65f14
+        );
+}
+
+.portfolio-info {
+
+    padding: 25px;
+}
+
+.portfolio-info small {
+
+    color: var(--green);
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+.portfolio-info h3 {
+
+    font-size: 16px;
+
+    margin: 9px 0 17px;
+}
+
+.project-link {
+
+    color: var(--gray);
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+.project-link:hover {
+
+    color: var(--green);
+}
+
+
+/* ================= WHY ================= */
+
+.why {
+
+    background:
+        linear-gradient(
+            180deg,
+            #06100c,
+            #081811
+        );
+}
+
+.why-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap: 20px;
+}
+
+.why-card {
+
+    padding: 30px;
+
+    background:
+        rgba(255,255,255,.02);
+
+    border:
+        1px solid
+        rgba(255,255,255,.07);
+}
+
+.why-card i {
+
+    font-size: 30px;
+
+    color: var(--green);
+
+    margin-bottom: 20px;
+}
+
+.why-card h3 {
+
+    margin-bottom: 12px;
+
+    font-size: 16px;
+}
+
+.why-card p {
+
+    color: var(--gray);
+
+    font-size: 11px;
+
+    line-height: 1.8;
+}
+
+
+/* ================= CTA ================= */
+
+.cta {
+
+    padding:
+        75px 7%;
+
+    background:
+        linear-gradient(
+            100deg,
+            var(--green2),
+            var(--green),
+            var(--gold)
+        );
+
+    color: #00140c;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.cta small {
+
+    font-size: 9px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+}
+
+.cta h2 {
+
+    font-size:
+        clamp(27px,4vw,48px);
+
+    margin-top: 10px;
+
+    font-weight: 900;
+}
+
+.cta h2 span {
+
+    color: white;
+}
+
+.cta-button {
+
+    background:
+        #00140c;
+
+    color: white;
+
+    padding: 16px 25px;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+}
+
+.cta-button:hover {
+
+    transform:
+        translateY(-4px);
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact {
+
+    background:
+        #050d09;
+}
+
+.contact-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 80px;
+}
+
+.contact-info h3 {
+
+    font-size: 31px;
+
+    margin-bottom: 18px;
+}
+
+.contact-info > p {
+
+    color: var(--gray);
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    margin-bottom: 30px;
+}
+
+.contact-detail {
+
+    display: flex;
+
+    gap: 15px;
+
+    align-items: center;
+
+    margin: 23px 0;
+}
+
+.contact-icon {
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(0,255,157,.15);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: var(--green);
+}
+
+.contact-detail small {
+
+    display: block;
+
+    color: var(--gray);
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 5px;
+}
+
+.contact-detail strong {
+
+    font-size: 12px;
+}
+
+.contact-detail a {
+
+    color: white;
+
+    text-decoration: none;
+}
+
+.contact-detail a:hover {
+
+    color: var(--green);
+}
+
+
+/* FORM */
+
+form {
+
+    padding: 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0d2419,
+            #07120d
+        );
+
+    border:
+        1px solid
+        rgba(0,255,157,.1);
+
+    box-shadow:
+        var(--shadow);
+}
+
+form input,
+form textarea {
+
+    width: 100%;
+
+    padding: 16px;
+
+    margin-bottom: 15px;
+
+    background:
+        rgba(255,255,255,.03);
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    outline: none;
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 11px;
+}
+
+form input:focus,
+form textarea:focus {
+
+    border-color:
+        var(--green);
+
+    box-shadow:
+        0 0 0 2px
+        rgba(0,255,157,.05);
+}
+
+form button {
+
+    border: none;
+
+    cursor: pointer;
+
+    width: 100%;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+
+    padding:
+        60px 7% 35px;
+
+    text-align: center;
+
+    background:
+        #020604;
+
+    border-top:
+        1px solid
+        rgba(0,255,157,.1);
+}
+
+.footer-logo {
+
+    font-size: 31px;
+
+    font-weight: 900;
+}
+
+.footer-logo span {
+
+    color: var(--green);
+}
+
+footer > p {
+
+    color: var(--gray);
+
+    font-size: 10px;
+
+    margin-top: 12px;
+}
+
+.footer-socials {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin: 25px 0;
+}
+
+.footer-socials a {
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(255,255,255,.1);
+
+    color: white;
+
+    text-decoration: none;
+}
+
+.footer-socials a:hover {
+
+    background:
+        var(--green);
+
+    color:
+        #00140c;
+}
+
+.footer-line {
+
+    height: 1px;
+
+    background:
+        rgba(255,255,255,.07);
+
+    margin: 25px 0;
+}
+
+.copyright {
+
+    font-size: 9px;
+
+    color: #617168;
+}
+
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp {
+
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+
+    background:
+        #25d366;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+
+    z-index: 9998;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 10px 35px
+        rgba(37,211,102,.35);
+
+    animation:
+        whatsappPulse 2s infinite;
+}
+
+.whatsapp:hover {
+
+    transform:
+        scale(1.1);
+
+    animation: none;
+}
+
+@keyframes whatsappPulse {
+
+    0% {
+        box-shadow:
+            0 0 0 0
+            rgba(37,211,102,.5);
+    }
+
+    70% {
+        box-shadow:
+            0 0 0 18px
+            rgba(37,211,102,0);
+    }
+
+    100% {
+        box-shadow:
+            0 0 0 0
+            rgba(37,211,102,0);
+    }
+}
+
+
+/* ================= BACK TOP ================= */
+
+.back-top {
+
+    position: fixed;
+
+    right: 30px;
+
+    bottom: 100px;
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+
+    background:
+        var(--green);
+
+    color:
+        #00140c;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: .3s;
+
+    z-index: 9990;
+}
+
+.back-top.show {
+
+    opacity: 1;
+
+    pointer-events: auto;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1100px) {
+
+    .hero {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .hero-description {
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons,
+    .socials {
+
+        justify-content: center;
+    }
+
+    .hero-visual {
+
+        order: -1;
+    }
+
+    .about,
+    .contact-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .tools-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .why-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+}
+
+
+@media(max-width:800px) {
+
+    header {
+
+        padding: 0 5%;
+    }
+
+    nav {
+
+        position: absolute;
+
+        left: -100%;
+
+        top: 78px;
+
+        width: 100%;
+
+        padding: 30px;
+
+        background:
+            #07130e;
+
+        flex-direction: column;
+
+        gap: 22px;
+
+        transition: .4s;
+    }
+
+    nav.open {
+
+        left: 0;
+    }
+
+    .menu {
+
+        display: block;
+    }
+
+    .hero {
+
+        padding:
+            130px 5%
+            80px;
+    }
+
+    .section {
+
+        padding:
+            90px 5%;
+    }
+
+    .visual-ring {
+
+        width: 320px;
+        height: 320px;
+    }
+
+    .profile-card {
+
+        width: 230px;
+        height: 290px;
+    }
+
+    .services-grid,
+    .portfolio-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .stats {
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .stat {
+
+        border-bottom:
+            1px solid
+            rgba(255,255,255,.06);
+    }
+
+    .cta {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+}
+
+
+@media(max-width:550px) {
+
+    .hero h1 {
+
+        font-size: 43px;
+
+        letter-spacing: -3px;
+    }
+
+    .hero-subtitle {
+
+        font-size: 18px;
+    }
+
+    .visual-ring {
+
+        width: 280px;
+        height: 280px;
+    }
+
+    .profile-card {
+
+        width: 205px;
+        height: 255px;
+    }
+
+    .card-logo {
+
+        font-size: 27px;
+    }
+
+    .services-grid,
+    .portfolio-grid,
+    .tools-grid,
+    .why-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+
+        grid-template-columns: 1fr;
+    }
+
+    .about-list {
+
+        grid-template-columns: 1fr;
+    }
+
+    .whatsapp {
+
+        width: 55px;
+        height: 55px;
+
+        right: 18px;
+        bottom: 18px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+    <a href="#home" class="logo">
+        J- <span>ROLAND</span>
+    </a>
+
+
+    <nav id="nav">
+
+        <a href="#home" class="active">
+            Home
+        </a>
+
+        <a href="#about">
+            About
+        </a>
+
+        <a href="#services">
+            Services
+        </a>
+
+        <a href="#tools">
+            Skills
+        </a>
+
+        <a href="#portfolio">
+            Portfolio
+        </a>
+
+        <a href="#contact">
+            Contact
+        </a>
+
+    </nav>
+
+
+    <div class="header-buttons">
+
+        <button id="themeButton"
+        title="Change Theme">
+
+            <i class="fas fa-sun"></i>
+
+        </button>
+
+
+        <button class="menu"
+        id="menuButton">
+
+            <i class="fas fa-bars"></i>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero" id="home">
+
+
+    <div class="hero-content">
+
+        <div class="hero-tag">
+
+            <i class="fas fa-circle"></i>
+
+            AVAILABLE FOR CREATIVE PROJECTS
+
+        </div>
+
+
+        <h1>
+
+            I Turn Ideas Into
+
+            <span class="green">
+                Powerful
+            </span>
+
+            <span class="gold">
+                Designs.
+            </span>
+
+        </h1>
+
+
+        <div class="hero-subtitle">
+
+            I'm
+            <strong>ANTHONY OBI</strong>
+
+            — Creative Designer & Web Designer
+
+        </div>
+
+
+        <p class="hero-description">
+
+            Welcome to <strong>VALIDDXN</strong> —
+            a creative design and digital solutions brand.
+            I create professional graphics, websites,
+            branding, photo edits and digital experiences
+            that help ideas stand out.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a href="#portfolio"
+            class="btn btn-green">
+
+                Explore My Work
+
+                <i class="fas fa-arrow-right"></i>
+
+            </a>
+
+
+            <a href="https://wa.me/2347047406271?text=Hello%20Anthony%2C%20I%20found%20your%20VALIDDXN%20portfolio%20and%20I%20would%20like%20to%20discuss%20a%20project."
+            target="_blank"
+            class="btn btn-outline">
+
+                <i class="fab fa-whatsapp"></i>
+
+                Chat With Me
+
+            </a>
+
+        </div>
+
+
+        <div class="socials">
+
+            <a href="#"
+            title="Facebook">
+
+                <i class="fab fa-facebook-f"></i>
+
+            </a>
+
+            <a href="#"
+            title="Instagram">
+
+                <i class="fab fa-instagram"></i>
+
+            </a>
+
+            <a href="#"
+            title="TikTok">
+
+                <i class="fab fa-tiktok"></i>
+
+            </a>
+
+            <a href="#"
+            title="LinkedIn">
+
+                <i class="fab fa-linkedin-in"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="hero-visual">
+
+        <div class="visual-ring">
+
+
+            <div class="profile-card">
+
+                <div class="card-logo">
+
+                    J- <span>ROLAND</span>
+
+                </div>
+
+
+                <div class="card-name">
+
+                    ANTHONY OBI
+
+                </div>
+
+
+                <div class="card-job">
+
+                    CREATIVE DESIGNER
+
+                </div>
+
+
+                <div class="card-line"></div>
+
+
+                <div class="card-icons">
+
+                    <i class="fas fa-pen-nib"></i>
+
+                    <i class="fas fa-camera"></i>
+
+                    <i class="fas fa-code"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     STATS
+===================================================== -->
+
+<div class="stats">
+
+    <div class="stat">
+
+        <i class="fas fa-palette"></i>
+
+        <h3>100+</h3>
+
+        <p>
+            Creative Designs
+        </p>
+
+    </div>
+
+
+    <div class="stat">
+
+        <i class="fas fa-globe"></i>
+
+        <h3>20+</h3>
+
+        <p>
+            Web Projects
+        </p>
+
+    </div>
+
+
+    <div class="stat">
+
+        <i class="fas fa-users"></i>
+
+        <h3>80+</h3>
+
+        <p>
+            Happy Clients
+        </p>
+
+    </div>
+
+
+    <div class="stat">
+
+        <i class="fas fa-layer-group"></i>
+
+        <h3>10+</h3>
+
+        <p>
+            Design Categories
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section class="section"
+id="about">
+
+
+    <div class="section-title">
+
+        <small>
+            ABOUT J-ROLAND
+        </small>
+
+        <h2>
+            Meet
+            <span>ANTHONY OBI</span>
+        </h2>
+
+    </div>
+
+
+    <div class="about">
+
+
+        <div class="about-brand">
+
+            <div class="about-brand-logo">
+
+                J- <span>ROLAND</span>
+
+            </div>
+
+            <div class="about-brand-text">
+
+                CREATIVE DESIGN &
+                DIGITAL SOLUTIONS
+
+            </div>
+
+        </div>
+
+
+
+        <div class="about-content">
+
+            <h3>
+
+                Creative Designer.
+                Web Designer.
+                Problem Solver.
+
+            </h3>
+
+
+            <p>
+
+                My name is
+                <strong>Anthony Obi</strong>,
+                the creative professional behind
+                <strong>J-ROLAND</strong>.
+
+            </p>
+
+
+            <p>
+
+                I specialize in graphic design,
+                photo editing, branding, web design
+                and digital solutions.
+
+            </p>
+
+
+            <p>
+
+                I use tools such as CorelDRAW,
+                PixelLab, PicsArt and Canva,
+                together with HTML, CSS and JavaScript,
+                to turn ideas into professional
+                visual experiences.
+
+            </p>
+
+
+            <div class="about-list">
+
+                <div>
+                    <i class="fas fa-check"></i>
+                    Graphic Design
+                </div>
+
+                <div>
+                    <i class="fas fa-check"></i>
+                    Web Design
+                </div>
+
+                <div>
+                    <i class="fas fa-check"></i>
+                    Photo Editing
+                </div>
+
+                <div>
+                    <i class="fas fa-check"></i>
+                    Branding
+                </div>
+
+                <div>
+                    <i class="fas fa-check"></i>
+                    Print Design
+                </div>
+
+                <div>
+                    <i class="fas fa-check"></i>
+                    Digital Solutions
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+
+<section class="section services"
+id="services">
+
+
+    <div class="section-title">
+
+        <small>
+            WHAT I DO
+        </small>
+
+        <h2>
+            My
+            <span>Services</span>
+        </h2>
+
+    </div>
+
+
+    <div class="services-grid">
+
+
+        <div class="service">
+
+            <span class="service-number">
+                01
+            </span>
+
+            <i class="fas fa-pen-nib"></i>
+
+            <h3>
+                Graphic Design
+            </h3>
+
+            <p>
+
+                Professional flyers,
+                posters, banners,
+                business cards,
+                brochures and advertising graphics.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="service">
+
+            <span class="service-number">
+                02
+            </span>
+
+            <i class="fas fa-camera"></i>
+
+            <h3>
+                Photo Editing
+            </h3>
+
+            <p>
+
+                Photo enhancement,
+                retouching, background removal,
+                passport photos and creative editing.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="service">
+
+            <span class="service-number">
+                03
+            </span>
+
+            <i class="fas fa-code"></i>
+
+            <h3>
+                Web Design
+            </h3>
+
+            <p>
+
+                Responsive modern websites
+                using HTML, CSS and JavaScript.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="service">
+
+            <span class="service-number">
+                04
+            </span>
+
+            <i class="fas fa-copyright"></i>
+
+            <h3>
+                Branding
+            </h3>
+
+            <p>
+
+                Logo design, brand identity,
+                typography, colors and
+                professional brand materials.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="service">
+
+            <span class="service-number">
+                05
+            </span>
+
+            <i class="fas fa-id-card"></i>
+
+            <h3>
+                ID Card Design
+            </h3>
+
+            <p>
+
+                Professional ID cards for
+                companies, schools,
+                organizations and events.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="service">
+
+            <span class="service-number">
+                06
+            </span>
+
+            <i class="fas fa-certificate"></i>
+
+            <h3>
+                Certificate Design
+            </h3>
+
+            <p>
+
+                Professional certificates
+                for schools, training programs,
+                awards and organizations.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="service">
+
+            <span class="service-number">
+                07
+            </span>
+
+            <i class="fas fa-print"></i>
+
+            <h3>
+                Print Design
+            </h3>
+
+            <p>
+
+                Print-ready designs for
+                flyers, banners, posters
+                and business materials.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="service">
+
+            <span class="service-number">
+                08
+            </span>
+
+            <i class="fas fa-mobile-screen"></i>
+
+            <h3>
+                Social Media Design
+            </h3>
+
+            <p>
+
+                Creative social media graphics,
+                advertisements and promotional
+                content.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="service">
+
+            <span class="service-number">
+                09
+            </span>
+
+            <i class="fas fa-lightbulb"></i>
+
+            <h3>
+                Digital Solutions
+            </h3>
+
+            <p>
+
+                Creative digital solutions
+                combining design and technology.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TOOLS
+===================================================== -->
+
+<section class="section tools-section"
+id="tools">
+
+
+    <div class="section-title">
+
+        <small>
+            MY SKILLS
+        </small>
+
+        <h2>
+            Tools &
+            <span>Expertise</span>
+        </h2>
+
+    </div>
+
+
+    <div class="tools-grid">
+
+
+        <div class="tool">
+
+            <div class="tool-icon corel">
+                C
+            </div>
+
+            <h3>
+                CorelDRAW
+            </h3>
+
+            <p>
+                Professional Graphic Design
+            </p>
+
+            <div class="progress">
+                <span style="width:95%"></span>
+            </div>
+
+            <span class="tool-percent">
+                95%
+            </span>
+
+        </div>
+
+
+
+        <div class="tool">
+
+            <div class="tool-icon pixellab">
+                P
+            </div>
+
+            <h3>
+                PixelLab
+            </h3>
+
+            <p>
+                Typography & Creative Design
+            </p>
+
+            <div class="progress">
+                <span style="width:92%"></span>
+            </div>
+
+            <span class="tool-percent">
+                92%
+            </span>
+
+        </div>
+
+
+
+        <div class="tool">
+
+            <div class="tool-icon picsart">
+                P
+            </div>
+
+            <h3>
+                PicsArt
+            </h3>
+
+            <p>
+                Photo Editing
+            </p>
+
+            <div class="progress">
+                <span style="width:90%"></span>
+            </div>
+
+            <span class="tool-percent">
+                90%
+            </span>
+
+        </div>
+
+
+
+        <div class="tool">
+
+            <div class="tool-icon canva">
+                C
+            </div>
+
+            <h3>
+                Canva
+            </h3>
+
+            <p>
+                Digital Design
+            </p>
+
+            <div class="progress">
+                <span style="width:90%"></span>
+            </div>
+
+            <span class="tool-percent">
+                90%
+            </span>
+
+        </div>
+
+
+
+        <div class="tool">
+
+            <div class="tool-icon html">
+                &lt;/&gt;
+            </div>
+
+            <h3>
+                HTML
+            </h3>
+
+            <p>
+                Website Structure
+            </p>
+
+            <div class="progress">
+                <span style="width:90%"></span>
+            </div>
+
+            <span class="tool-percent">
+                90%
+            </span>
+
+        </div>
+
+
+
+        <div class="tool">
+
+            <div class="tool-icon css">
+                #
+            </div>
+
+            <h3>
+                CSS
+            </h3>
+
+            <p>
+                Website Styling
+            </p>
+
+            <div class="progress">
+                <span style="width:88%"></span>
+            </div>
+
+            <span class="tool-percent">
+                88%
+            </span>
+
+        </div>
+
+
+
+        <div class="tool">
+
+            <div class="tool-icon javascript">
+                JS
+            </div>
+
+            <h3>
+                JavaScript
+            </h3>
+
+            <p>
+                Website Interaction
+            </p>
+
+            <div class="progress">
+                <span style="width:80%"></span>
+            </div>
+
+            <span class="tool-percent">
+                80%
+            </span>
+
+        </div>
+
+
+
+        <div class="tool">
+
+            <div class="tool-icon webdesign">
+                <i class="fas fa-globe"></i>
+            </div>
+
+            <h3>
+                Web Design
+            </h3>
+
+            <p>
+                Responsive Websites
+            </p>
+
+            <div class="progress">
+                <span style="width:88%"></span>
+            </div>
+
+            <span class="tool-percent">
+                88%
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PORTFOLIO
+===================================================== -->
+
+<section class="section"
+id="portfolio">
+
+
+    <div class="section-title">
+
+        <small>
+            SELECTED WORK
+        </small>
+
+        <h2>
+            My
+            <span>Portfolio</span>
+        </h2>
+
+    </div>
+
+
+    <div class="filters">
+
+        <button
+        class="filter active"
+        data-filter="all">
+
+            All
+
+        </button>
+
+        <button
+        class="filter"
+        data-filter="graphic">
+
+            Graphic Design
+
+        </button>
+
+        <button
+        class="filter"
+        data-filter="photo">
+
+            Photo Editing
+
+        </button>
+
+        <button
+        class="filter"
+        data-filter="web">
+
+            Web Design
+
+        </button>
+
+        <button
+        class="filter"
+        data-filter="branding">
+
+            Branding
+
+        </button>
+
+    </div>
+
+
+    <div class="portfolio-grid">
+
+
+        <div class="portfolio-card graphic">
+
+            <div class="portfolio-image design1">
+
+                <span>
+                    FLYER
+                </span>
+
+            </div>
+
+            <div class="portfolio-info">
+
+                <small>
+                    GRAPHIC DESIGN
+                </small>
+
+                <h3>
+                    Creative Flyer Design
+                </h3>
+
+                <a href="#contact"
+                class="project-link">
+
+                    Discuss Similar Project
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="portfolio-card photo">
+
+            <div class="portfolio-image design2">
+
+                <span>
+                    PHOTO
+                </span>
+
+            </div>
+
+            <div class="portfolio-info">
+
+                <small>
+                    PHOTO EDITING
+                </small>
+
+                <h3>
+                    Professional Photo Editing
+                </h3>
+
+                <a href="#contact"
+                class="project-link">
+
+                    Discuss Similar Project
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="portfolio-card web">
+
+            <div class="portfolio-image design3">
+
+                <span>
+                    WEB
+                </span>
+
+            </div>
+
+            <div class="portfolio-info">
+
+                <small>
+                    WEB DESIGN
+                </small>
+
+                <h3>
+                    Business Website
+                </h3>
+
+                <a href="#contact"
+                class="project-link">
+
+                    Discuss Similar Project
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="portfolio-card branding">
+
+            <div class="portfolio-image design4">
+
+                <span>
+                    BRAND
+                </span>
+
+            </div>
+
+            <div class="portfolio-info">
+
+                <small>
+                    BRANDING
+                </small>
+
+                <h3>
+                    Brand Identity Design
+                </h3>
+
+                <a href="#contact"
+                class="project-link">
+
+                    Discuss Similar Project
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="portfolio-card graphic">
+
+            <div class="portfolio-image design5">
+
+                <span>
+                    BANNER
+                </span>
+
+            </div>
+
+            <div class="portfolio-info">
+
+                <small>
+                    GRAPHIC DESIGN
+                </small>
+
+                <h3>
+                    Professional Banner
+                </h3>
+
+                <a href="#contact"
+                class="project-link">
+
+                    Discuss Similar Project
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="portfolio-card web">
+
+            <div class="portfolio-image design6">
+
+                <span>
+                    WEBSITE
+                </span>
+
+            </div>
+
+            <div class="portfolio-info">
+
+                <small>
+                    WEB DESIGN
+                </small>
+
+                <h3>
+                    Responsive Website
+                </h3>
+
+                <a href="#contact"
+                class="project-link">
+
+                    Discuss Similar Project
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WHY VALIDDXN
+===================================================== -->
+
+<section class="section why">
+
+
+    <div class="section-title">
+
+        <small>
+            WHY CHOOSE J- ROLAND
+        </small>
+
+        <h2>
+            Creativity With
+            <span>Purpose</span>
+        </h2>
+
+    </div>
+
+
+    <div class="why-grid">
+
+
+        <div class="why-card">
+
+            <i class="fas fa-lightbulb"></i>
+
+            <h3>
+                Creative Thinking
+            </h3>
+
+            <p>
+                I turn ideas into creative,
+                meaningful and professional
+                visual concepts.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <i class="fas fa-bullseye"></i>
+
+            <h3>
+                Attention To Detail
+            </h3>
+
+            <p>
+                I focus on typography, spacing,
+                color, composition and
+                professional presentation.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <i class="fas fa-laptop-code"></i>
+
+            <h3>
+                Design + Technology
+            </h3>
+
+            <p>
+                I combine graphic design
+                with modern web technologies.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <i class="fas fa-handshake"></i>
+
+            <h3>
+                Client Focused
+            </h3>
+
+            <p>
+                I work to understand your vision
+                and turn it into a result
+                you can be proud of.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="cta">
+
+    <div>
+
+        <small>
+            READY TO CREATE?
+        </small>
+
+        <h2>
+
+            Let's Build Something
+            <span>Amazing.</span>
+
+        </h2>
+
+    </div>
+
+
+    <a
+    href="https://wa.me/2347047406271?text=Hello%20Anthony%2C%20I%20would%20like%20to%20work%20with%20J-ROLAND."
+    target="_blank"
+    class="cta-button">
+
+        <i class="fab fa-whatsapp"></i>
+
+        Start A Project
+
+    </a>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section class="section contact"
+id="contact">
+
+
+    <div class="section-title">
+
+        <small>
+            GET IN TOUCH
+        </small>
+
+        <h2>
+            Let's Work
+            <span>Together</span>
+        </h2>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+
+        <div class="contact-info">
+
+            <h3>
+                Have a project in mind?
+            </h3>
+
+
+            <p>
+
+                Whether you need a flyer,
+                logo, website, photo editing,
+                branding or another creative
+                project, let's talk.
+
+            </p>
+
+
+            <div class="contact-detail">
+
+                <div class="contact-icon">
+
+                    <i class="fas fa-user"></i>
+
+                </div>
+
+                <div>
+
+                    <small>
+                        NAME
+                    </small>
+
+                    <strong>
+                        ANTHONY OBI
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-detail">
+
+                <div class="contact-icon">
+
+                    <i class="fab fa-whatsapp"></i>
+
+                </div>
+
+                <div>
+
+                    <small>
+                        WHATSAPP
+                    </small>
+
+                    <strong>
+
+                        <a
+                        href="https://wa.me/2347047406271?text=Hello%20Anthony%2C%20I%20would%20like%20to%20discuss%20a%20project."
+                        target="_blank">
+
+                            07047406271
+
+                        </a>
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-detail">
+
+                <div class="contact-icon">
+
+                    <i class="fas fa-globe"></i>
+
+                </div>
+
+                <div>
+
+                    <small>
+                        BRAND
+                    </small>
+
+                    <strong>
+                        J- ROLAND
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <a
+            href="https://wa.me/2347047406271?text=Hello%20Anthony%2C%20I%20need%20a%20design%20service."
+            target="_blank"
+            class="btn btn-green">
+
+                <i class="fab fa-whatsapp"></i>
+
+                Chat On WhatsApp
+
+            </a>
+
+        </div>
+
+
+
+        <form id="contactForm">
+
+            <input
+            type="text"
+            id="name"
+            placeholder="Your Name"
+            required>
+
+
+            <input
+            type="email"
+            id="email"
+            placeholder="Your Email"
+            required>
+
+
+            <input
+            type="text"
+            id="project"
+            placeholder="What service do you need?"
+            required>
+
+
+            <textarea
+            id="message"
+            rows="7"
+            placeholder="Tell me about your project..."
+            required></textarea>
+
+
+            <button
+            type="submit"
+            class="btn btn-green">
+
+                Send Via WhatsApp
+
+                <i class="fab fa-whatsapp"></i>
+
+            </button>
+
+
+            <p
+            id="formMessage"
+            style="
+            margin-top:15px;
+            color:#00ff9d;
+            font-size:11px;
+            ">
+            </p>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-logo">
+
+        J- <span>ROLAND</span>
+
+    </div>
+
+
+    <p>
+
+        Graphic Design • Web Design •
+        Photo Editing • Branding •
+        Digital Solutions
+
+    </p>
+
+
+    <div class="footer-socials">
+
+        <a href="#">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="#">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="#">
+            <i class="fab fa-tiktok"></i>
+        </a>
+
+        <a href="#">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+
+    </div>
+
+
+    <div class="footer-line"></div>
+
+
+    <p class="copyright">
+
+        © 2026 J-ROLAND.
+        All Rights Reserved.
+
+        <br><br>
+
+        Designed by
+        <strong style="color:#00ff9d;">
+            ANTHONY OBI
+        </strong>
+
+    </p>
+
+</footer>
+
+
+
+<!-- =====================================================
+     WHATSAPP FLOATING BUTTON
+===================================================== -->
+
+<a
+href="https://wa.me/2347047406271?text=Hello%20Anthony%2C%20I%20found%20your%20J-ROLAND%20portfolio."
+target="_blank"
+class="whatsapp"
+title="Chat with Anthony Obi on WhatsApp">
+
+    <i class="fab fa-whatsapp"></i>
+
+</a>
+
+
+
+<!-- BACK TO TOP -->
+
+<button
+id="backTop"
+class="back-top">
+
+    <i class="fas fa-arrow-up"></i>
+
+</button>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* ================= MOBILE MENU ================= */
+
+const menuButton =
+document.getElementById("menuButton");
+
+const nav =
+document.getElementById("nav");
+
+
+menuButton.addEventListener(
+"click",
+function() {
+
+    nav.classList.toggle("open");
+
+    const icon =
+    menuButton.querySelector("i");
+
+    if(nav.classList.contains("open")) {
+
+        icon.classList.remove("fa-bars");
+
+        icon.classList.add("fa-xmark");
+
+    }
+
+    else {
+
+        icon.classList.remove("fa-xmark");
+
+        icon.classList.add("fa-bars");
+
+    }
+
+});
+
+
+/* CLOSE MENU */
+
+document.querySelectorAll("nav a")
+.forEach(function(link) {
+
+    link.addEventListener(
+    "click",
+    function() {
+
+        nav.classList.remove("open");
+
+        const icon =
+        menuButton.querySelector("i");
+
+        icon.classList.remove("fa-xmark");
+
+        icon.classList.add("fa-bars");
+
+    });
+
+});
+
+
+
+/* ================= THEME ================= */
+
+const themeButton =
+document.getElementById("themeButton");
+
+
+themeButton.addEventListener(
+"click",
+function() {
+
+    document.body.classList.toggle("light");
+
+    const icon =
+    themeButton.querySelector("i");
+
+    if(
+        document.body.classList.contains("light")
+    ) {
+
+        icon.classList.remove("fa-sun");
+
+        icon.classList.add("fa-moon");
+
+    }
+
+    else {
+
+        icon.classList.remove("fa-moon");
+
+        icon.classList.add("fa-sun");
+
+    }
+
+});
+
+
+
+/* ================= PORTFOLIO FILTER ================= */
+
+const filters =
+document.querySelectorAll(".filter");
+
+const portfolioCards =
+document.querySelectorAll(".portfolio-card");
+
+
+filters.forEach(function(filter) {
+
+    filter.addEventListener(
+    "click",
+    function() {
+
+        filters.forEach(function(button) {
+
+            button.classList.remove("active");
+
+        });
+
+        filter.classList.add("active");
+
+
+        const category =
+        filter.getAttribute("data-filter");
+
+
+        portfolioCards.forEach(
+        function(card) {
+
+            if(
+                category === "all" ||
+                card.classList.contains(category)
+            ) {
+
+                card.style.display =
+                "block";
+
+            }
+
+            else {
+
+                card.style.display =
+                "none";
+
+            }
+
+        });
+
+    });
+
+});
+
+
+
+/* ================= CONTACT FORM ================= */
+
+const contactForm =
+document.getElementById("contactForm");
+
+const formMessage =
+document.getElementById("formMessage");
+
+
+contactForm.addEventListener(
+"submit",
+function(event) {
+
+    event.preventDefault();
+
+
+    const name =
+    document.getElementById("name").value;
+
+    const email =
+    document.getElementById("email").value;
+
+    const project =
+    document.getElementById("project").value;
+
+    const message =
+    document.getElementById("message").value;
+
+
+    const whatsappMessage =
+
+    `Hello Anthony, I am ${name}.
+
+I found your J-ROLAND portfolio.
+
+I need your service:
+${project}
+
+My email:
+${email}
+
+Project details:
+${message}`;
+
+
+    const whatsappURL =
+
+    "https://wa.me/2347047406271?text="
+    +
+    encodeURIComponent(whatsappMessage);
+
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+
+
+    formMessage.innerHTML =
+    "Opening WhatsApp...";
+
+});
+
+
+
+/* ================= BACK TO TOP ================= */
+
+const backTop =
+document.getElementById("backTop");
+
+
+window.addEventListener(
+"scroll",
+function() {
+
+    if(window.scrollY > 500) {
+
+        backTop.classList.add("show");
+
+    }
+
+    else {
+
+        backTop.classList.remove("show");
+
+    }
+
+});
+
+
+backTop.addEventListener(
+"click",
+function() {
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+});
+
+
+
+/* ================= ACTIVE NAVIGATION ================= */
+
+const sections =
+document.querySelectorAll("section[id]");
+
+const navLinks =
+document.querySelectorAll("nav a");
+
+
+window.addEventListener(
+"scroll",
+function() {
+
+    let current = "";
+
+
+    sections.forEach(
+    function(section) {
+
+        const sectionTop =
+        section.offsetTop - 150;
+
+
+        if(
+            window.scrollY >= sectionTop
+        ) {
+
+            current =
+            section.getAttribute("id");
+
+        }
+
+    });
+
+
+    navLinks.forEach(
+    function(link) {
+
+        link.classList.remove("active");
+
+
+        if(
+            link.getAttribute("href")
+            === "#" + current
+        ) {
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+});
+
+
+
+/* ================= SCROLL ANIMATION ================= */
+
+const revealItems =
+document.querySelectorAll(
+".service, .tool, .portfolio-card, .why-card"
+);
+
+
+const observer =
+new IntersectionObserver(
+function(entries) {
+
+    entries.forEach(
+    function(entry) {
+
+        if(entry.isIntersecting) {
+
+            entry.target.style.opacity =
+            "1";
+
+            entry.target.style.transform =
+            "translateY(0)";
+
+        }
+
+    });
+
+},
+{
+    threshold: .12
+});
+
+
+revealItems.forEach(
+function(item) {
+
+    item.style.opacity = "0";
+
+    item.style.transform =
+    "translateY(30px)";
+
+    item.style.transition =
+    "opacity .7s ease, transform .7s ease";
+
+    observer.observe(item);
+
+});
+
+
+</script>
+
+</body>
+</html>
